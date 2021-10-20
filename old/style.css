@@ -1,0 +1,97 @@
+* {
+    font-family:'Titillium Web';
+  }
+  body {
+      margin:0;
+  }
+  button {
+      display: block;
+  }
+  input {
+      display:block;
+  }
+  .anaglyph {
+    letter-spacing: 3px;
+    text-shadow: -2px 0 1px rgb(30,242,241) , 2px 0 1px rgb(246,5,10) ;
+  }
+  #navbar {
+  background:rgba(255, 228, 196, 0);
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  height: 5vh;
+  transition: background 0.3s ease-in;
+  }
+  #navbar a {
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  transition: color 0.3s ease-in;
+  }
+  #navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+  #navbar.fixed {
+  position: fixed;
+  top: 0;
+  background: rgb(27,28,30);
+}
+  #navbar.fixed a {
+    color: rgb(255, 255, 255);
+  }
+  #onBg {
+    width: 100%;
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: 5% 45% 48% 2%; 
+    grid-template-rows: 3% 50% 45% 2%; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . ."
+      ". writing bg ."
+      ". w2 w2 ."
+      ". . . .";
+  }
+  .targets {
+    color: #ddd;
+    font-size: xx-large;
+  }
+  #tsparticles {
+      grid-area: bg !important;
+      grid-column-start: -3;
+      grid-row-start: 2;
+  }
+  #target1 {
+    grid-area: writing;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  #target2 {
+    grid-area: w2;
+  }
+  #container {
+      display: grid;
+      margin: auto;
+      grid-template: 150px repeat(3, 1fr) / repeat(5, 1fr);
+      gap: 20px;
+  }
+  #container p {
+    grid-area: 1 / 3 / 2/ 4;
+  }
+  #testingArea {
+      background-color: rgb(107, 107, 107);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+      grid-area: 1 / 2 / 2/ 3;
+  }
+  #bg {
+  position: fixed;
+  /* background: radial-gradient(ellipse at center, #3c3c3c 0%, black 100%);
+  overflow: hidden; */
+
+  z-index: -3;
+}
