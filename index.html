@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <!-- <script src="https://www.braedin.com/Thpace/thpace.min.js"></script> -->
+  <script src="https://unpkg.com/thpace"></script>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="https://unpkg.com/typeit@8.0.3/dist/index.umd.js"></script>
   <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
@@ -19,14 +20,17 @@
       <a href="#team">Team</a>
       <a href="#aboutus">About Us</a>
   </div>
-    <div id="bg"></div>
-    <script type="text/javascript" src="bg.js"></script>
+    <!-- <div id="bg"></div> -->
+    <canvas id="bg"></canvas>
     <div id="onBg">
-    <div id="target1"></div>
     <div id="tsparticles"></div>
+    <div id="target1" class="targets"></div>
+    <div id="target2" class="targets"></div>
     </div>
+    <script type="text/javascript" src="bg.js"></script>
     <script type="module" src="typing.js"></script>
     <div id="container">
+    <script>Thpace.create(canv, settings);</script>
     <div id="testingArea">
         Showing {{ toggleb ? "Both" : "Left" }}, clicked {{counter}} times
         <input type="text" v-model="toggleb"/>
@@ -57,7 +61,7 @@
 <footer>Footer</footer>
 <link rel="stylesheet" href="style.css">
 <script>tsParticles.load('tsparticles', deer);</script>
-
+<script>Thpace.create(canv, settings);</script>
 <script>
 $(document).ready(function() {
   $(window).bind('scroll', function() {
