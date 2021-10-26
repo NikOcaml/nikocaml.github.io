@@ -83,7 +83,8 @@
   }
   #bg {
   position: fixed;
-  background: linear-gradient(135deg, black 0%, #1b1c1e 40%, #fd6262 100%);
+  /* background: linear-gradient(135deg, black 0%, #1b1c1e 40%, #fd6262 100%); */
+  background: radial-gradient(ellipse at bottom right, #fd6262 0%, #1b1c1e 60%,  black 100%);
   overflow: hidden;
   z-index: -3;
 }
